@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --PALE-BLUE: hsl(225, 100%, 94%);
+  --BRIGHT-BLUE: hsl(245, 75%, 52%);
+  --VERY-PALE-BLUE: hsl(225, 100%, 98%);
+  --DESATURATED-BLUE: hsl(224, 23%, 55%);
+  --DARK-BLUE: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/pattern-background-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.card-container {
+  max-width: 300px;
+  border-radius: 12px;
+  margin-inline: 1.5em;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0 0 0 / 0.3);
+  padding-bottom: 1.8em;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-info {
+  text-align: center;
+  padding: 1.4em 2.5em 1.5em 2.5em;
+}
+.card-info .header {
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
+  font-weight: 900;
+}
+
+.card-info .details {
+  font-size: 0.7rem;
+  color: var(--DESATURATED-BLUE);
+  line-height: 1.7;
+}
+
+.card-price-per-year {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 2em;
+  margin-bottom: 2em;
+  padding: 0.8em 0.8em;
+  border-radius: 4px;
+  background-color: var(--VERY-PALE-BLUE);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8em;
+}
+.price-wrapper {
+  font-size: 0.8rem;
+}
+.price-wrapper .plan {
+  font-weight: 900;
+}
+.price-wrapper .price {
+  color: var(--DESATURATED-BLUE);
+}
+.change {
+  font-size: 0.6rem;
+  color: var(--BRIGHT-BLUE);
+  font-weight: 900;
+  transition: all 0.15s;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.change:hover {
+  color: rgb(151, 86, 255);
+}
+
+.music-icon {
+  height: 30px;
+}
+
+.card-btn {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.8em;
+  row-gap: 0.9em;
+}
+.pay-btn {
+  border: none;
+  font-size: 0.6rem;
+  background-color: var(--BRIGHT-BLUE);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.15s;
+  padding: 1em;
+}
+.pay-btn:hover {
+  background-color: rgb(151, 86, 255);
+}
+
+.cancel-btn {
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--DESATURATED-BLUE);
+  font-weight: 700;
+  transition: all 0.15s;
+  padding: 0;
+  display: inline;
+}
+.cancel-btn:hover {
+  color: var(--DARK-BLUE);
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --SOFT-BLUE: hsl(215, 51%, 70%);
+  --CYAN: hsl(178, 100%, 50%);
+  --MAIN-BG: hsl(217, 54%, 11%);
+  --CARD-BG: hsl(216, 50%, 16%);
+  --LINE: hsl(215, 32%, 27%);
+  --WHITH: hsl(0, 0%, 100%);
+
+  --P-FONT: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--MAIN-BG);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  max-width: 300px;
+  background-color: var(--CARD-BG);
+  padding: 1.5em;
+  border-radius: 10px;
+}
+.img {
+  position: relative;
+  width: 100%;
+}
+.img img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+
+.viwe {
+  background-color: rgba(0, 255, 255, 0.493);
+  border-radius: 5px;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 8%;
+}
+.viwe img {
+  width: 35px;
+}
+.img :hover.viwe {
+  opacity: 1;
+}
+
+.card-info h2 {
+  color: var(--WHITH);
+  font-size: 1.1rem;
+}
+.card-info h2:hover {
+  color: var(--CYAN);
+  cursor: pointer;
+}
+.card .details {
+  color: var(--SOFT-BLUE);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 18px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--LINE);
+  padding-bottom: 20px;
+}
+.stats .point {
+  color: var(--CYAN);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.stats .time {
+  font-size: 0.8rem;
+  color: var(--SOFT-BLUE);
+}
+.personal-info {
+  display: flex;
+  align-items: center;
+}
+.personal-info .picture {
+  width: 35px;
+  border: 2px solid var(--WHITH);
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.personal-info .name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--SOFT-BLUE);
+}
+.personal-info .name span {
+  color: var(--WHITH);
+}
+.personal-info .name span:hover {
+  color: var(--CYAN);
+  cursor: pointer;
+}

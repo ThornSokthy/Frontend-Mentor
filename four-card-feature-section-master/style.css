@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --RED: hsl(0, 78%, 62%);
+  --CYAN: hsl(180, 62%, 55%);
+  --ORANGE: hsl(34, 97%, 64%);
+  --BLUE: hsl(212, 86%, 64%);
+
+  --DARK-BLUE: hsl(234, 12%, 34%);
+  --LIGHT-GRAY: hsl(0, 0%, 98%);
+  --GRAY-BLUE: hsl(229, 6%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  height: 100vh;
+  margin-inline: 1.5em;
+}
+
+header {
+  margin-top: 3em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-bottom: 2.5em;
+}
+
+.gray-header {
+  font-size: 1.6rem;
+  font-weight: 200;
+  letter-spacing: -0.5px;
+}
+.header {
+  font-size: 1.6rem;
+  color: var(--DARK-BLUE);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.45em;
+}
+.sub-header {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  max-width: 25%;
+  color: var(--GRAY-BLUE);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 1.4em;
+}
+.box-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4em;
+}
+
+.box {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  /* max-width: 280px; */
+  padding: 1.1em 1.1em 1em 1.4em;
+  overflow: flow-root;
+}
+.box .title {
+  font-size: 1.2rem;
+  color: var(--DARK-BLUE);
+  margin-bottom: 0.3em;
+}
+.box .details {
+  font-size: 0.7rem;
+  padding-right: 1.6em;
+  color: var(--GRAY-BLUE);
+}
+.box img {
+  margin-top: 1.5em;
+  width: 40px;
+  float: inline-end;
+}
+
+.cyan {
+  border-top: 4px solid var(--RED);
+}
+.red {
+  border-top: 4px solid var(--CYAN);
+}
+.orange {
+  border-top: 4px solid var(--ORANGE);
+}
+.blue {
+  border-top: 4px solid var(--BLUE);
+}
+
+@media screen and (max-width: 1023px) {
+  .sub-header {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 601px) {
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 1.5em;
+    padding-bottom: 4em;
+  }
+  .sub-header {
+    max-width: 100%;
+    font-size: 0.75rem;
+  }
+}
